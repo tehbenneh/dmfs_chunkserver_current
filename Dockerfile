@@ -10,4 +10,7 @@ RUN apt-get update ; apt-get install -y moosefs-chunkserver nano ;
 RUN mv /etc/mfs/mfschunkserver.cfg.sample /etc/mfs/mfschunkserver.cfg ;
 RUN mv /etc/mfs/mfshdd.cfg.sample /etc/mfs/mfshdd.cfg ;
 
+EXPOSE 9420
+EXPOSE 9422
+
 CMD ["/usr/sbin/mfschunkserver", "-f", "start"]
